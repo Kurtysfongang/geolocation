@@ -45,7 +45,7 @@ pipeline {
         stage ("Kube Deploy") {
             steps {
                 withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'eks_credentials', namespace: '', serverUrl: '') {
-                 sh "kubectl apply -f eks-deploy-from-ecr.yaml"
+                 sh "kubectl apply -f eks_deploy_from_ecr.yaml"
                 }
             }
         }
